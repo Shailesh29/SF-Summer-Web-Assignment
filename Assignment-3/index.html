@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Play Ludo Online For Free</title>
+	<meta charset="UTF-8"> 
+
+	<style type="text/css">
+		.grid-container{
+			display: grid;
+			grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px ;
+			grid-template-rows: 60px 60px 60px 60px 60px 60px 60px 60px ;
+			position: absolute;
+			left: 270px;
+			top: 100px;
+		}
+		.grid-item{
+			display:inline-grid;
+			border: 1px solid ;
+			padding: 20px;
+			text-align: center;
+			border-radius: 5px;
+		}
+		.unusual{
+			grid-column: 2/8;
+			grid-row: 2/8;
+			border:1px solid;
+		}
+		#cen{
+			position: absolute;
+			top: 100px;
+			left:320px;
+			border:1px solid;
+			border-radius: 12px;
+			text-decoration: none;
+			padding: 0px;
+			list-style-type: none;
+		}
+		#turn{
+			font-size: 18px;
+			text-align: center;
+		}
+		#dice{
+			width: 100%;
+			padding: 10px;
+			text-align: center;
+		}
+		#show-no{
+			text-align: center;
+			padding: 5px;
+			font-size: 25px;
+		}
+		#p1{
+			background-color: blue;
+		}
+		#p15{
+			background-color: red;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="grid-container">
+		<div class="grid-item " id="p1" onclick="run('p1')"></div>
+		<div class="grid-item " id="p2" onclick="run('p2')"></div>
+		<div class="grid-item " id="p3" onclick="run('p3')"></div>
+		<div class="grid-item " id="p4" onclick="run('p4')"></div>
+		<div class="grid-item " id="p5" onclick="run('p5')"></div>
+		<div class="grid-item " id="p6" onclick="run('p6')"></div>
+		<div class="grid-item " id="p7" onclick="run('p7')"></div>
+		<div class="grid-item " id="p8" onclick="run('p8')"></div>
+		<div class="grid-item " id="p28" onclick="run('p28')"></div>
+		<div class="unusual"> 
+			<ul id="cen">
+				<li><p id="turn"></p></li>
+				<li><button id="dice">Roll the Dice !</button></li>
+				<li><p id="show-no"></p></div></li>
+			</ul>
+		<div class="grid-item " id="p9" onclick="run('p9')"></div>
+		<div class="grid-item " id="p27" onclick="run('p27')"></div>
+		<div class="grid-item " id="p10" onclick="run('p10')"></div>
+		<div class="grid-item " id="p26" onclick="run('p26')"></div>
+		<div class="grid-item " id="p11" onclick="run('p11')"></div>
+		<div class="grid-item " id="p25" onclick="run('p25')"></div>
+		<div class="grid-item " id="p12" onclick="run('p12')"></div>
+		<div class="grid-item " id="p24" onclick="run('p24')"></div>
+		<div class="grid-item " id="p13" onclick="run('p13')"></div>
+		<div class="grid-item " id="p23" onclick="run('p23')"></div>
+		<div class="grid-item " id="p14" onclick="run('p14')"></div>
+		<div class="grid-item " id="p22" onclick="run('p22')"></div>
+		<div class="grid-item " id="p21" onclick="run('p21')"></div>
+		<div class="grid-item " id="p20" onclick="run('p20')"></div>
+		<div class="grid-item " id="p19" onclick="run('p19')"></div>
+		<div class="grid-item " id="p18" onclick="run('p18')"></div>
+		<div class="grid-item " id="p17" onclick="run('p17')"></div>
+		<div class="grid-item " id="p16" onclick="run('p16')"></div>
+		<div class="grid-item " id="p15" onclick="run('p15')"></div>
+	</div>
+
+	<p style="font-size: 15px;">
+		Note:click on the tokens to make them move.
+	</p>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		var r=0,l1a=0,l1b=0,l2a=0,l2b=0,chance=0,t=0,c1=0,c2=0;
+		var p1a=1,p1b=1 ,p2a=15,p2b=15;
+		$(document).ready(function(){
+			$("#turn").text("Player 1");
+			$("#dice").click(function(){
+				r=Math.floor(Math.random()*6) +1;
+				if(chance==0)
+					$("#show-no").text("p1:");
+				else
+					$("#show-no").text("p2:");					
+    			$("#show-no").text($("#show-no").text()+r);
+				if(chance==0)
+					run_1();
+				else
+					run_2();
+				if(chance==0)
+					$("#turn").text("Player 1").show(1000);
+				else
+					$("#turn").text("Player 2").show(1000);
+			});
+
+		});
+
+	function run(q){
+		if(t==0 && r>0){
+			if( $("#"+q).text().indexOf("1A")>=0 && p1a+r<=28)
+			{
+				a=document.getElementById(q).innerHTML;
+				a=a.replace("1A","");
+				document.getElementById(q).innerHTML=a;
+				p1a+=r; r=0;
+				if($("#p"+p1a).text().indexOf("2A")>=0)
+					{l2a=0; $("#p"+p1a).text(""); p2a=15;}
+				if($("#p"+p1a).text().indexOf("2B")>=0)
+					{l2b=0; $("#p"+p1a).text(""); p2b=15;}
+				if(p1a==28)
+					{alert("1A completed"); l1a=2;}
+				else
+					$("#p"+p1a).text($("#p"+p1a).text()+"1A");
+			}
+			else if( $("#"+q).text().indexOf("1B")>=0 && p1b+r<=28)
+			{
+				a=document.getElementById(q).innerHTML;
+				a=a.replace("1B","");
+				document.getElementById(q).innerHTML=a;
+				p1b+=r; r=0;
+				if($("#p"+p1b).text().indexOf("2A")>=0)
+					{l2a=0; $("#p"+p1b).text(""); p2a=15;}
+				if($("#p"+p1b).text().indexOf("2B")>=0)
+					{l2b=0;  $("#p"+p1b).text(""); p2b=15;}
+				if(p1b==28)
+					{alert("1B completed"); l1b=2;}
+				else
+					$("#p"+p1b).text($("#p"+p1b).text()+"1B");
+			}
+		}
+		else if(t==1 && r>0){
+			if( $("#"+q).text().indexOf("2A")>=0 && (p2a+r<=14 || c1==0))
+			{
+				a=document.getElementById(q).innerHTML;
+				a=a.replace("2A","");
+				document.getElementById(q).innerHTML=a;
+				p2a+=r; r=0;
+				if(p2a>28)
+					{p2a-=28; c1=1;}
+				if($("#p"+p2a).text().indexOf("1A")>=0)
+					{l1a=0; $("#p"+p2a).text(""); p1a=0;}
+				if($("#p"+p2a).text().indexOf("1B")>=0)
+					{l1b=0; $("#p"+p2a).text(""); p1b=0;}
+				if(p2a==14)
+					{alert("2A completed"); l2a=2;}
+				else
+					$("#p"+p2a).text($("#p"+p2a).text()+"2A");
+			}
+			else if( $("#"+q).text().indexOf("2B")>=0 && (p2b+r<=14 || c2==0))
+			{
+				a=document.getElementById(q).innerHTML;
+				a=a.replace("2B","");
+				document.getElementById(q).innerHTML=a;
+				p2b+=r; r=0;
+				if(p2b>28)
+					{p2b-=28; c2=1;}
+				if($("#p"+p2b).text().indexOf("1A")>=0)
+					{l1a=0; $("#p"+p2b).text(""); p1a=0;}
+				if($("#p"+p2b).text().indexOf("1B")>=0)
+					{l1b=0; $("#p"+p2b).text(""); p1b=0;}
+				if(p2b==14)
+					{alert("2B completed"); l2b=2;}
+				else
+					$("#p"+p2b).text($("#p"+p2b).text()+"2B");
+			}
+		}
+		if(l1a==2 && l1b==2)
+			{alert("player 1 won"); $("#p1").text("Won");}
+		else if(l2a==2 && l2b==2)
+			{alert("player 2 won"); $("#p15").text("Won");}
+	}
+	
+	function run_1(){
+		t=chance;
+		if(r==6){
+			chance=0;
+			if(l1a==0)
+			{$("#p1").text($("#p1").text()+"1A"); l1a=1;r=0;}
+			else if(l1b==0)
+			{$("#p1").text($("#p1").text()+"1B"); l1b=1;r=0;}
+		}
+		else if(l1a==1 || l1b==1){
+			chance=1;
+		}
+		else
+			{chance=1;}
+	}
+
+	
+	function run_2(){
+		t=chance;
+		if(r==6){
+			chance=1;
+			if(l2a==0)
+			{$("#p15").text($("#p15").text()+"2A"); l2a=1;r=0;}
+			else if(l2b==0)
+			{$("#p15").text($("#p15").text()+"2B"); l2b=1;r=0;}
+		}
+		else if(l2a==1 || l2b==1){
+			chance=0;
+		}
+		else
+			{chance=0;}
+	}
+
+	</script>
+
+</body>
+</html>
