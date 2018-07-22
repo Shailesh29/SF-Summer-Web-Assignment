@@ -1,0 +1,83 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library Portal</title>
+	<style type="text/css">
+		body{
+			margin:0px;
+			background-image: url("reg_opt.jpg");
+			background-position: cover;
+			background-repeat: no-repeat;
+		}
+		#main{
+			position: absolute;
+			left: 850px;
+			top: 150px;
+			border-radius: 15px;
+			font-size: 25px;
+			padding: 50px;
+		}
+		.check{
+			margin:2px;
+			font-family:'Comic Sans MS', cursive, sans-serif;
+		}
+		.uni{
+			font-size: 15px;
+			margin:0px;
+			color: #d0ff00;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+		});
+		function inp_(){
+			var value=$("#inp").val();
+			$.post("unique.php",
+			{
+				"inp":value
+			},
+			function(data){
+				$("#unique").html(data);
+			});
+		};
+		function pass(){
+			var value=$("#pa").val();
+			$.post("pass.php",
+			{
+				"pass":value
+			},
+			function(data){
+				$("#pass").html(data);
+			});
+		};
+
+	</script>
+</head>
+<body id="body" >
+	<div >
+	<form method="post" action="register.php">
+	<fieldset id="main">
+		<legend>Register</legend>
+		<p class="check">Name:</p>
+		<input type="text" name="name" value="name"><br/>
+		<p class="check">Username:</p>
+		<input id="inp" type="text" name="username" onchange="inp_()"><br/>
+		<p id="unique" class="uni">do write</p>
+		<p class="check">Password:</p>
+		<input type="password" name="password" onchange="pass()" id="pa" ><br/>
+		<p id="pass" class="uni">do write</p>
+		<input type="radio" name="type" value="admin">Admin<input type="radio" name="type" value="user" checked>User<br>
+		<div>
+		<input style="float: left; font-size: 20px;" type="submit">
+		<button style="float: right; font-size: 20px;" type="button" onclick="window.location.href='index.html'">Log In</button>
+		</div>
+	</fieldset>
+	</form>
+	</div>
+
+</body>
+</html>

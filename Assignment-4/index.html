@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library Portal</title>
+	<style type="text/css">
+		body{
+			margin:0px;
+			background-image: url("lib1.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		#above{
+			text-align: center;
+			border: 2px solid white;
+			border-radius: 15px;
+			position: absolute;
+			top:120px;
+			right: 460px;
+			left: 460px;
+			bottom: 150px;
+			background-color: #00D2C7;
+		}
+		#under{
+			background-image: url('b7.jpg');
+			border: 2px solid black;
+			border-radius: 10px;
+			position: absolute;
+			top: 150px;
+			right: 160px;
+			left: 160px;
+			bottom: 180px;
+			background-color:white;
+			z-index: -1;
+		}
+		#login{
+			float: right;
+			margin:0px;
+			padding: 40px;
+			overflow: hidden;
+		}
+		#form{
+			text-align: center;
+			color: #32B95B;
+		}
+		.button{
+			border-radius: 8px;
+			background-color: #8CC63E;
+			font-size: 20px;
+			margin: 10px;
+		}
+		#left{
+			float: left;
+			font-size: 20px;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="above">
+		<h1 style="font-family:'Arial Black'; font-size: 45px; margin:10px; ">Welcome</h1><br>
+		<h4 style="font-size: 35px;margin:10px;">To The</h4><br>
+		<h2 style="font-family:'Comic Sans MS', cursive, sans-serif; font-size:55px; margin: 13px; ">Central Library</h2>
+	</div>
+
+	<div id="under">
+		<div id="login">
+			<form id="form" method="post" action="login.php">
+			<p style="font-family: 'Trebuchet MS', Helvetica, sans-serif; font-size: 25px; margin:1px;" >Username:</p><br>
+			<input type="text" name="username" value="user"><br/>
+			<p style="font-family:'Trebuchet MS', Helvetica, sans-serif; font-size: 25px; margin: 1px;" >Password:</p><br>
+			<input  type="password" name="password" value="abc@123"><br/>
+			<div style="margin: 8px;">
+			<input class="button" style="float: left;" type="submit" value="Log in">
+			<button class="button" style="float: right;" type="button" onclick="window.location.href='register.html'">Register</button>
+			</div>
+			</form>
+		</div>
+		<div id="left">
+			<ul style="list-style-type:circle;">
+				<li>Largest Library Of <br>its own kind in India</li>
+				<li>Thousands of Books<br> Available in Various <br>Language</li>
+				<li>Books of gnere:Fiction,<br>Novel,Fantasy,Mystery,<br>Literature,etc. are available </li>
+				<li>Easy to Issue <br>and Return</li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>
