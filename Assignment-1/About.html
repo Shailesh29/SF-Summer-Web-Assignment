@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Me</title>
+<meta charset="utf-8">
+  <style type="text/css">
+  .list{
+    color: #09e51f;
+    font-weight: 6px;
+  }
+  #div1{
+    width: 100%;
+  }
+  #a1{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: 120%;
+    text-decoration: none;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+  } 
+
+  @-webkit-keyframes mymove {
+    from {color: red;}
+    to {color: blue;}
+  }
+
+  body{
+    background-image: url("img4.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+  }
+  ul {
+    list-style-type:none;
+  padding: 0;
+  margin: 0;
+  overflow:hidden;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+  display: block;
+  color:black;
+  text-decoration: none;
+  text-align:center;
+  padding:20px;
+  }
+
+  li a:hover {
+  background-color:#efeb73;
+  }
+  li a:active{
+  background-color:red;
+  }
+
+   *{
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.column {
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 50px;
+    padding: 15px;
+    border:dotted 3px;
+    border-radius: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p{
+  color: #dff704;
+  font-size: 20px;
+  font-weight: bold;
+}
+.foot{
+    border-top: solid 1px;
+    width: 100%;
+    margin-bottom: 0;
+    background-color: #606362;
+    padding-top: 10px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<ul>
+  <li > <a class="list" href="index.html">Home</a> </li>
+  <li > <a class="list" href="About.html">About me </a></li>
+  <li > <a class="list" href="hobbies.html">Hobbies</a> </li>
+  <li > <a class="list" href="Contact.html">Contact us</a> </li>
+</ul>
+<div id='div1'>
+<a id='a1' href="index.html"><h1>Shailesh</h1></a> 
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <h2 style="text-align: center; color:#e5020d;">About Me</h2>
+    <p>
+      He is attentive and committed to understand and learn fully.Besides knowledge, he also acquires skill and habits which develop his personalities.He remains prepare to face the many challenges which he is likely to meet in future life.He is more intelligent, bright, skillful and progressive. He respects his teachers and is helpful and friendly to his class-fellows.  They are the pillars of a nation and future of the country.<br/>
+      He has sound mind and a sound body go together.He always takes an active part in academic as well as in extra-curricular activities.He participates in sports and games and put all his efforts to achieve the goals.<br>
+      An ideal student develops good habits. He is always punctual and does the right things at the right time. He does all things with concentration, devotion and sincerity. He accepts the truth and always engages himself in adventures and discoveries.
+    </p>
+  </div>
+</div>
+
+<div class="foot">
+  Copyright reserved . For any queries <a style="text-decoration: underline;" class="list" href="contact.html">Contact us</a>
+</div>
+
+</body>
+</html>

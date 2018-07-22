@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hobbies</title>
+<meta charset="utf-8">
+  <style type="text/css">
+  .list{
+    color: #09e51f;
+    font-weight: 6px;
+  }
+  #div1{
+    width: 100%;
+    float: centre;
+  }
+  #a1{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: 120%;
+    text-decoration: none;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+  } 
+
+  @-webkit-keyframes mymove {
+    from {color: red;}
+    to {color: blue;}
+  }
+
+  body{
+    background-image: url("img2.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  ul {
+    list-style-type:none;
+  padding: 0;
+  margin: 0;
+  overflow:hidden;
+  }
+
+  .head {
+    float: left;
+  }
+
+  li{
+    float : left;
+  }
+
+  li a {
+  display: block;
+  color:black;
+  text-decoration: none;
+  text-align:center;
+  padding:20px;
+  }
+
+  li a:hover {
+  background-color:#efeb73;
+  }
+  li a:active{
+  background-color:red;
+  }
+
+   *{
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+.lef{
+  width: 75%;
+  border:solid 2px black;
+  border-radius: 20px;
+  float:left;
+  padding:0;
+  text-align:left;
+  color: blue;
+  background-color: #e5ca1d;
+  color:#ef3737;
+  padding: 5px;
+}
+
+.rig{
+  width: 75%;
+  border:solid 2px black;
+  border-radius: 20px;
+  background-color: #02e58d;
+  float:right;
+  padding: 0;
+  text-align: right;
+  color:#ef3737;
+  padding: 5px;
+}
+
+.lef_list{
+  float: none;
+  margin-left: 10px;
+  font-size: 20px;
+  text-align: left;
+  color: white; 
+  list-style-type:square;
+}
+
+.rig_list{
+  float: none;
+  font-size: 20px;
+  text-align: right;
+  color: white; 
+  list-style-type:square;
+}
+
+.foot{
+    border-top:solid 1px;
+    width: 100%;
+    margin-bottom: 0;
+    background-color: #606362;
+    padding-top: 10px;
+  }
+
+h4{
+  color: white;
+}
+
+.uno{
+  width:100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  list-style-type: square;
+}
+
+</style>
+</head>
+
+<body>
+
+<ul>
+  <li > <a class="list" href="index.html">Home</a> </li>
+  <li > <a class="list" href="About.html">About me </a></li>
+  <li > <a class="list" href="hobbies.html">Hobbies</a> </li>
+  <li > <a class="list" href="Contact.html">Contact us</a> </li>
+</ul>
+<div id='div1'>
+<a id='a1' href="index.html"><h1>Shailesh</h1></a> 
+</div>
+
+<h2 class="lef">College</h2>
+<div >
+  <ul class='uno'>
+  <li class="lef_list" >Enrolled in Mining Eng.</li>
+  <li class="lef_list" >ASM of SpringFest</li>
+  <li class="lef_list" >Junior Reporter in Awaaz IIT Kharagpur</li>
+  </ul>
+</div>
+
+<h2 class="rig">High School</h2>
+<div >
+  <ul class='uno'>  
+  <li class="rig_list" >Had been a House Leader</li>
+  <li class="rig_list" >Passed 12th from St. Joseph School</li>
+  <li class="rig_list" >Achieved NTSE Scholarship</li>
+  </ul>
+</div>
+
+<h2 class="lef">Sports</h2>
+<div >
+  <ul class='uno'>
+  <li class="lef_list" >Participated In GC Sports</li>
+  <li class="lef_list" >Won in inter school 200m </li>
+  <li class="lef_list" >Won inter school Badminton</li>
+  </ul>
+</div>
+
+<h2 class="rig">School</h2>
+<div >
+  <ul class='uno'>  
+  <li class="rig_list" >Won quiz events</li>
+  <li class="rig_list" >Won many eassy events</li>
+  </ul>
+</div>
+
+<div class="foot">
+  Copyright reserved . For any queries <a style="text-decoration: underline;" class="list" href="contact.html">Contact us</a>
+</div>
+
+</body>
+</html>
